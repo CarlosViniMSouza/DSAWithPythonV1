@@ -1,7 +1,6 @@
-git init
 git add -A 
-git commit -m "DSA With Python get started"
-git branch -M main
-git remote add origin https://github.com/CarlosViniMSouza/DSAWithPythonV1.git
+git commit -m "Queues added | Statistic task done"
 git push -u origin main
 git status
+
+# link for linked list: https://www.educba.com/linked-list-in-python/
