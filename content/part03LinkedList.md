@@ -104,5 +104,64 @@ This involves pointing the next pointer of the new data node to the current head
 This involves pointing the next pointer of the the current last node of the linked list to the new data node. So the current last node of the linked list becomes the second last data node and the new node becomes the last node of the linked list.
 
 ```python
+class Node:
+    def __init__(self, data=None):
+        self.data = data
+        self.nextValue = None
+
+
+class SinglyLinkedList:
+    def __init__(self):
+        self.headValue = None
+
+    # 2. Traversing a Linked List:
+    def listprint(self):
+        value = self.headValue
+
+        while value is not None:
+            print(value.data)
+            value = value.nextValue
+
+    # 3. Insertion in a Linked List
+    def AtBegining(self, newData):
+        newNode = Node(newData)
+
+        # Update the new nodes next val to existing node
+        newNode.nextValue = self.headValue
+        self.headValue = newNode
+
+    # 4. Inserting at the End
+    def AtEnd(self, newData):
+        newNode = Node(newData)
+
+        if self.headValue is None:
+            self.headValue = newNode
+            return
+
+        laste = self.headValue
+
+        while laste.nextValue:
+            laste = laste.nextValue
+        laste.nextValue = newNode
+
+
+list = SinglyLinkedList()
+list.headValue = Node("Monday")
+
+e2 = Node("Tuersday")
+e3 = Node("Wednesday")
+
+list.headValue.nextValue = e2
+e2.nextValue = e3
+
+list.AtEnd("Thursday")
+list.listprint()
+```
+
+### 5. Inserting in between two Data Nodes
+
+This involves changing the pointer of a specific node to point to the new node. That is possible by passing in both the new node and the existing node after which the new node will be inserted. So we define an additional class which will change the next pointer of the new node to the next pointer of middle node. Then assign the new node to next pointer of the middle node.
+
+```python
 
 ```
