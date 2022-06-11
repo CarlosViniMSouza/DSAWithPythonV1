@@ -2,6 +2,6 @@
 
 - [x] Search by others sites about DSA with Python
 
-- [] Search infos about Trees and Binarie Tree in Python (go from DSA II)
+- [ ] Search infos about Trees and Binarie Tree in Python (go from DSA II)
 
-- [] Finish this project, please!! 🙏
+- [ ] Finish this project, please!! 🙏
