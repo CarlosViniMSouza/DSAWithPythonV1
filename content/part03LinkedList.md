@@ -69,3 +69,30 @@ def insertAtLast(iAL, data):
 
     return node
 ```
+
+### 4. Navigating through data set
+
+While navigating check whether the list is empty or not. Use the start node link to reach first node and use the link present in the first node to reach second and move on till the end.
+
+```python
+def navigateList(nL):
+    if nL.startNode is None:
+        return print("List empty")
+    else:
+        print("Data Link to Next\n")
+        print(" ", nL.startNode)
+
+    node = nL.startNode
+
+    while node is not None:
+        print(node.item, node.ref)
+        node = node.ref
+```
+
+### 5. Appending Nodes to Dataset
+
+With all definitions are over, create a working object for linked list creation module and invoke it for inserting new nodes at the end.
+
+```python
+
+```
