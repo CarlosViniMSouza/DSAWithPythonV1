@@ -1,68 +1,116 @@
 # Linked List Operations #
 
+# 1. Creation of Linked list:
 
-# 1. Node Creation:
+"""
 class Node:
-    def __init__(dataNode, data):
-        dataNode.item = data  # Node created with data
-        dataNode.ref = None  # Link is pointing to null
+    def __init__(self, data=None):
+        self.data = data
+        self.nextValue = None
 
 
-# 2. Linked List Creation:
-class LinkedListDemo:
-    def __init__(lld):
-        lld.startNode = None
-        # our first node
-
-    # 3. Insert at 'The End':
-    def insertAtLast(iAL, data):
-        newNode = Node(data)       # move data
-
-        if iAL.startNode is None:  # empty set
-            iAL.startNode = newNode
-
-        node = iAL.startNode
-
-        while node.ref is not None:
-            node = node.ref
-            node.ref = newNode  # new node is the last
-
-    # 4. Navigating data set:
-    def navigateList(nL):
-
-        if nL.startNode is None:
-            print("List empty")
-
-        print("Datas:")
-        print("\n")
-
-        node = nL.startNode
-
-        while node is not None:
-            print(node.item)
-            node = node.ref
+class SinglyLinkedList:
+    def __init__(self):
+        self.headValueue = None
 
 
-# 5. Appending Notes:
-newLinkedList = LinkedListDemo()  # created a new object
+list1 = SinglyLinkedList()
+list1.headValueue = Node("Monday")
 
-newLinkedList.insertAtLast("01° - January")
-newLinkedList.insertAtLast("02° - February")
-newLinkedList.insertAtLast("03° - March")
-newLinkedList.insertAtLast("04° - April")
-newLinkedList.insertAtLast("05° - May")
-newLinkedList.insertAtLast("06° - June")
-newLinkedList.insertAtLast("07° - July")
-newLinkedList.insertAtLast("08° - August")
-newLinkedList.insertAtLast("09° - September")
-newLinkedList.insertAtLast("10° - October")
-newLinkedList.insertAtLast("11° - November")
-newLinkedList.insertAtLast("11° - December")
+e2 = Node("Tuersday")
+e3 = Node("Wednesday")
 
-newLinkedList.navigateList()
+# Link first Node to second node
+list1.headValueue.nextValue = e2
+
+# Link second Node to third node
+e2.nextValue = e3
+"""
+
+# 2. Traversing a Linked List:
 
 """
-This code isn't working!
-I'll change for other website the linked list content.
-link: https://www.tutorialspoint.com/python_data_structure/python_linked_lists.html
+class Node:
+    def __init__(self, data=None):
+        self.data = data
+        self.nextValue = None
+
+
+class SinglyLinkedList:
+    def __init__(self):
+        self.headValue = None
+
+    def listprint(self):
+        value = self.headValue
+        while value is not None:
+            print(value.data)
+            value = value.nextValue
+
+
+list = SinglyLinkedList()
+list.headValue = Node("Monday")
+e2 = Node("Tuersday")
+e3 = Node("Wednesday")
+
+# Link first Node to second node
+list.headValue.nextValue = e2
+
+# Link second Node to third node
+e2.nextValue = e3
+
+list.listprint()
 """
+
+# 3. Insertion in a Linked List
+
+
+class Node:
+    def __init__(self, data=None):
+        self.data = data
+        self.nextValue = None
+
+
+class SinglyLinkedList:
+    def __init__(self):
+        self.headValue = None
+
+    def listprint(self):
+        value = self.headValue
+        while value is not None:
+            print(value.data)
+            value = value.nextValue
+
+    def AtBegining(self, newdata):
+        NewNode = Node(newdata)
+
+        # Update the new nodes next val to existing node
+        NewNode.nextValue = self.headValue
+        self.headValue = NewNode
+
+
+list = SinglyLinkedList()
+list.headValue = Node("Monday")
+e2 = Node("Tuersday")
+e3 = Node("Wednesday")
+
+# Link first Node to second node
+list.headValue.nextValue = e2
+
+# Link second Node to third node
+e2.nextValue = e3
+
+list.AtBegining("Sunday")
+list.listprint()
+
+"""
+output:
+
+Sunday
+Monday
+Tuersday
+Wednesday
+"""
+
+# NOTE: This code is more complete than the previous one #
+
+# 4. Inserting at the End

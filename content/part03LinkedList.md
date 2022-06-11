@@ -1,10 +1,10 @@
-[LINK FOR ARTICLE - EDUCBA](https://www.educba.com/linked-list-in-python/)
+[LINK FOR ARTICLE - Tutorials Point](https://www.tutorialspoint.com/python_data_structure/python_linked_lists.htm)
 
 ## Definition of Linked List in Python
 
-Linked list in Python provides a logical connection between data elements that are stored in memory in different locations physically. Data elements are stored in nodes along with reference links to the next immediate data element. Logical sequencing of data is achieved in Python through these links in data nodes and the entire gamut of data can be accessed sequentially using these links by navigating from the first data element to the next and so on.
+A linked list is a sequence of data elements, which are connected together via links. Each data element contains a connection to another data element in form of a pointer. Python does not have linked lists in its standard library. We implement the concept of linked lists using the concept of nodes as discussed in the previous chapter.
 
-Linked list in Python removes the hassle of pre-defining the memory blocks, provides flexibility to scale up data dynamically, simplifies the data operations, and ensures optimum usage of memory.
+We have already seen how we create a node class and how to traverse the elements of a node.In this chapter we are going to study the types of linked lists known as singly linked lists. In this type of data structure there is only one link between any two data elements. We create such a list and create additional methods to insert, update and remove elements from the list.
 
 ## Singly Linked List
 
@@ -28,70 +28,80 @@ Pictorial Representation:
 
 ## Linked List Operations
 
-### 1. Node creation
+### 1. Creation of Linked list
 
-A program class to create a node should be defined as a first step in the python program and the data objects can be created as when required.
+A linked list is created by using the node class we studied in the last chapter. We create a Node object and create another class to use this ode object. We pass the appropriate values through the node object to point the to the next data elements. The below program creates the linked list with three data elements. In the next section we will see how to traverse the linked list.
 
 ```python
 class Node:
-  def __init__(data_node, data):
-    data_node.item = data # Node created with data
-    data_node.ref = None  # Link is pointing to null
+    def __init__(self, data=None):
+        self.data = data
+        self.nextValue = None
+
+class SLinkedList:
+    def __init__(self):
+        self.headValue = None
+
+list1 = SLinkedList()
+list1.headValue = Node("Monday")
+
+e2 = Node("Tuersday")
+e3 = Node("Wednesday")
+
+# Link first Node to second node
+list1.headValue.nextValue = e2
+
+# Link second Node to third node
+e2.nextValue = e3
 ```
 
-### 2. Linked List Creation
+### 2. Traversing a Linked List
 
-Another program class to create linked list with initial values should be defined in the program as next step. This class would contain steps for subsequent operations like `Inserting`, `Delete`, `Traverse` (Navigation).
+Singly linked lists can be traversed in only forward direction starting form the first data element. We simply print the value of the next data element by assigning the pointer of the next node to the current data element.
 
 ```python
-class LinkedListDemo:
-    def __init__(lld):
-        lld.start_node = None
-        # our first node
+class Node:
+    def __init__(self, data=None):
+        self.data = data
+        self.nextValue = None
+
+
+class SinglyLinkedList:
+    def __init__(self):
+        self.headValue = None
+
+    def listprint(self):
+        value = self.headValue
+        while value is not None:
+            print(value.data)
+            value = value.nextValue
+
+
+list = SinglyLinkedList()
+list.headValue = Node("Monday")
+e2 = Node("Tuersday")
+e3 = Node("Wednesday")
+
+# Link first Node to second node
+list.headValue.nextValue = e2
+
+# Link second Node to third node
+e2.nextValue = e3
+
+list.listprint()
 ```
 
-### 3. Initial Data Loading (Insert at The End)
+### 3. **Insertion in a Linked List**
 
-Ideally the initial loading can happen from the end of the empty data set. While inserting a new data, If the dataset is empty make the new node as the first and last node and exit. If data is present in the dataset then navigate to end, make the current last node as last but one node. New node will be the last.
+Inserting element in the linked list involves reassigning the pointers from the existing nodes to the newly inserted node. Depending on whether the new data element is getting inserted at the beginning or at the middle or at the end of the linked list, we have the below scenarios.
 
-```python
-def insertAtLast(iAL, data):
-    newNode = Node(data)       # move data
+### Inserting at the Beginning
 
-    if iAL.startNode is None:  # empty set
-        iAL.startNode = newNode
+This involves pointing the next pointer of the new data node to the current head of the linked list. So the current head of the linked list becomes the second data element and the new node becomes the head of the linked list.
 
-    node = iAL.startNode
+### 4. Inserting at the End
 
-    while node.ref is not None:
-        node = node.ref
-        node.ref = newNode  # new node is the last
-
-    return node
-```
-
-### 4. Navigating through data set
-
-While navigating check whether the list is empty or not. Use the start node link to reach first node and use the link present in the first node to reach second and move on till the end.
-
-```python
-def navigateList(nL):
-    if nL.startNode is None:
-        return print("List empty")
-    else:
-        print("Data Link to Next\n")
-        print(" ", nL.startNode)
-
-    node = nL.startNode
-
-    while node is not None:
-        print(node.item, node.ref)
-        node = node.ref
-```
-
-### 5. Appending Nodes to Dataset
-
-With all definitions are over, create a working object for linked list creation module and invoke it for inserting new nodes at the end.
+This involves pointing the next pointer of the the current last node of the linked list to the new data node. So the current last node of the linked list becomes the second last data node and the new node becomes the last node of the linked list.
 
 ```python
 

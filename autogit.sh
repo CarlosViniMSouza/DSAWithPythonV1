@@ -1,4 +1,4 @@
 git add -A 
-git commit -m "part03LinkedList -> added | Next step: restart"
+git commit -m "Next Operation: 4. Inserting at the End"
 git push -u origin main
 git status
