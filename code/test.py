@@ -98,3 +98,18 @@ print("\nResultado da media:", 184/20)
 
 # A mediana é dada por:
 print("Resultado da mediana:", 8 + (((20/2) - 5) * 4)/(16))
+
+# Questão 17:
+
+# A media é dada por:
+print("\nResultado da media:", 700/100)
+
+# A mediana é calculada por:
+print("Resultado da mediana:", 5 + (((100)/2 - 20) * 5)/(50))
+
+# Questão 18:
+
+print("Resultado da Variancia:", (1/(200 - 1)) *
+      ((2.204 * (10 ** 8)) - ((0.00206 * (10 ** 8)) ** 2)/200))
+
+print("Resultado do Coef. Variacao:", (203.24/1030) * 100)
