@@ -54,3 +54,35 @@ class Stack:
         for i in range(len(self.stack)):
             print(self.stack[i])
 ```
+
+## 2. POP from a Stack
+
+As we know we can remove only the top most data element from the stack, we implement a python program which does that. The remove function in the following program returns the top most element. we check the top element by calculating the size of the stack first and then use the in-built `.pop()` method to find out the top most element.
+
+```python
+class Stack:
+    def __init__(self):
+        self.stack = []
+
+    def addElement(self, dataValue):
+        if dataValue not in self.stack:
+            self.stack.append(dataValue)
+            return True
+        else:
+            return False
+
+    def removeElement(self):
+        self.stack.reverse()
+        if len(self.stack) <= 0:
+            return print("No element in the Stack")
+        else:
+            return self.stack.pop(-1)
+
+    def peekStack(self):
+        return self.stack[-1]
+
+    def seeAllStack(self):
+        self.stack.reverse()
+        for i in range(len(self.stack)):
+            print(self.stack[i])
+```

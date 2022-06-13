@@ -40,6 +40,13 @@ class Stack:
         else:
             return False
 
+    def removeElement(self):
+        self.stack.reverse()
+        if len(self.stack) <= 0:
+            return print("No element in the Stack")
+        else:
+            return self.stack.pop(-1)
+
     def peekStack(self):
         return self.stack[-1]
 
@@ -73,6 +80,15 @@ stack01.seeAllStack()
 print("\nAll stack02:\n")
 stack02.seeAllStack()
 
+print("\nElement removed:", stack01.removeElement())
+print("Element removed:", stack02.removeElement())
+
+print("\nAll in stack01 now:\n")
+stack01.seeAllStack()
+
+print("\nAll in stack02 now:\n")
+stack02.seeAllStack()
+
 """
 output:
 
@@ -97,4 +113,18 @@ March
 February
 January
 
+Element removed: Monday
+Element removed: January
+
+All in stack01 now:
+
+Tuersday
+Wednesday
+Thursday
+
+All in stack02 now:
+
+February
+March
+April
 """

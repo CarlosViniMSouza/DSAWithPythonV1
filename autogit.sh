@@ -1,4 +1,4 @@
 git add -A 
-git commit -m "add code in part01Stacks.md"
+git commit -m "add Operation POP from a Stack"
 git push -u origin main
 git status
