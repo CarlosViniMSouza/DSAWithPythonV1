@@ -35,5 +35,22 @@ In a stack the element insreted last in sequence will come out first as we can r
 Let us understand, how to use PUSH in Stack. Refer the program mentioned program below:
 
 ```python
+class Stack:
+    def __init__(self):
+        self.stack = []
 
+    def addElement(self, dataValue):
+        if dataValue not in self.stack:
+            self.stack.append(dataValue)
+            return True
+        else:
+            return False
+
+    def peekStack(self):
+        return self.stack[-1]
+
+    def seeAllStack(self):
+        self.stack.reverse()
+        for i in range(len(self.stack)):
+            print(self.stack[i])
 ```

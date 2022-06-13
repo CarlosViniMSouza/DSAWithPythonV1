@@ -1,4 +1,4 @@
 git add -A 
-git commit -m "Stack - Next Opera: POP from a Stack"
+git commit -m "add code in part01Stacks.md"
 git push -u origin main
 git status
