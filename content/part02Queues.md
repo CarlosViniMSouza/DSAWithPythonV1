@@ -21,3 +21,5 @@ print(queue.popleft())          # The second to arrive now leaves
 print(queue)                    # Remaining queue in order of arrival
 # output: deque(['Michael', 'Terry', 'Graham'])
 ```
+
+## [Python - Queue - Tutorials Point](https://www.tutorialspoint.com/python_data_structure/python_queue.htm)
