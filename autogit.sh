@@ -1,4 +1,4 @@
 git add -A 
-git commit -m "part02Queues.py -> add function showQueue()"
+git commit -m "Dequeue -> added"
 git push -u origin main
 git status
