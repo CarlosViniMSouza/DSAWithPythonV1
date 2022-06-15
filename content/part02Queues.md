@@ -23,3 +23,41 @@ print(queue)                    # Remaining queue in order of arrival
 ```
 
 ## [Python - Queue - Tutorials Point](https://www.tutorialspoint.com/python_data_structure/python_queue.htm)
+
+We are familiar with queue in our day to day life as we wait for a service. The queue data structure aslo means the same where the data elements are arranged in a queue. The uniqueness of queue lies in the way items are added and removed. The items are allowed at on end but removed form the other end. So it is a *First-in-First* out method.
+
+A queue can be implemented using python list where we can use the `.insert()` and `.pop()` methods to add and remove elements. Their is no insertion as data elements are always added at the end of the queue.
+
+### Adding Elements
+
+In the below example we create a queue class where we implement the *First-in-First-Out* method. We use the in-built insert method for adding data elements.
+
+```python
+class Queue:
+
+    def __init__(self):
+        self.queue = list()
+
+    def addElement(self, data):
+        if data not in self.queue:
+            self.queue.insert(0, data)
+            return True
+        else:
+            return False
+
+    def sizeQueue(self):
+        return len(self.queue)
+
+
+TheQueue = Queue()
+
+TheQueue.addElement("Monday")
+TheQueue.addElement("Tuersday")
+TheQueue.addElement("Wednesday")
+TheQueue.addElement("Thursday")
+
+print("The size of Queue:", TheQueue.sizeQueue())
+# output: The size of Queue: 4
+```
+
+### Removing Elements
