@@ -25,8 +25,12 @@ class Queue:
         if data not in self.queue:
             self.queue.insert(0, data)
             return True
-        else:
-            return False
+        return False
+
+    def removeElement(self):
+        if len(self.queue) > 0:
+            return self.queue.pop()
+        return ("No Elements in Queue!")
 
     def sizeQueue(self):
         return len(self.queue)
@@ -41,3 +45,9 @@ TheQueue.addElement("Thursday")
 
 print("The size of Queue:", TheQueue.sizeQueue())
 # output: The size of Queue: 4
+
+print("\nRemoving an element:", TheQueue.removeElement())
+# output: Removing an element: Monday
+
+print("\nThe new size of Queue:", TheQueue.sizeQueue())
+# output: The size of Queue: 3

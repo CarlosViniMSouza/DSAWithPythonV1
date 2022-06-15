@@ -61,3 +61,43 @@ print("The size of Queue:", TheQueue.sizeQueue())
 ```
 
 ### Removing Elements
+
+In the below example we create a queue class where we insert the data and then remove the data using the in-built pop method.
+
+```python
+class Queue:
+
+    def __init__(self):
+        self.queue = list()
+
+    def addElement(self, data):
+        if data not in self.queue:
+            self.queue.insert(0, data)
+            return True
+        return False
+
+    def removeElement(self):
+        if len(self.queue) > 0:
+            return self.queue.pop()
+        return ("No Elements in Queue!")
+
+    def sizeQueue(self):
+        return len(self.queue)
+
+
+TheQueue = Queue()
+
+TheQueue.addElement("Monday")
+TheQueue.addElement("Tuersday")
+TheQueue.addElement("Wednesday")
+TheQueue.addElement("Thursday")
+
+print("The size of Queue:", TheQueue.sizeQueue())
+# output: The size of Queue: 4
+
+print("\nRemoving an element:", TheQueue.removeElement())
+# output: Removing an element: Monday
+
+print("\nThe new size of Queue:", TheQueue.sizeQueue())
+# output: The size of Queue: 3
+```
