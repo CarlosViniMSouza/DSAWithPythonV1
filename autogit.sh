@@ -1,4 +1,4 @@
 git add -A 
-git commit -m "test.py -> Coef. Var. : fixed"
+git commit -m "part02Queues.py -> add function showQueue()"
 git push -u origin main
 git status
