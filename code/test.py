@@ -24,11 +24,11 @@ print("Desvio Padrao da Amostra 03:", round(statistics.stdev(amostra03), 3))
 # Coeficiente de Variação == Distorção ??? (caso True, o codigo abaixo é válido):
 
 print("\nCoef. Var. da Amostra 01:", round(
-    scipy.stats.skew(amostra01, bias=False), 3))
+    (statistics.stdev(amostra01)/statistics.mean(amostra01))*100, 3))
 print("Coef. Var. da Amostra 02:", round(
-    scipy.stats.skew(amostra02, bias=False), 3))
+    (statistics.stdev(amostra02)/statistics.mean(amostra02))*100, 3))
 print("Coef. Var. da Amostra 03:", round(
-    scipy.stats.skew(amostra03, bias=False), 3))
+    (statistics.stdev(amostra02)/statistics.mean(amostra02))*100, 3))
 
 # removendo da memoria as listas da questão 11:
 del amostra01, amostra02, amostra03
@@ -43,7 +43,7 @@ print("Desvio Padrao da serie estatistica:",
       round(statistics.stdev(serieEst), 3))
 
 print("Coef. Var. da serie estatistica:", round(
-    scipy.stats.skew(serieEst, bias=False), 3))
+    (statistics.stdev(serieEst)/statistics.mean(serieEst))*100, 3))
 
 # removendo da memoria as listas da questão 12:
 del serieEst
@@ -112,4 +112,4 @@ print("Resultado da mediana:", 5 + (((100)/2 - 20) * 5)/(50))
 print("Resultado da Variancia:", (1/(200 - 1)) *
       ((2.204 * (10 ** 8)) - ((0.00206 * (10 ** 8)) ** 2)/200))
 
-print("Resultado do Coef. Variacao:", (203.24/1030) * 100)
+print("Resultado do Coef. Variacao:", round((203.24/1030)*100, 3))
