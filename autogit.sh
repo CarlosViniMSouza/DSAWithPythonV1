@@ -1,4 +1,4 @@
 git add -A 
-git commit -m "translations -> part01Stacks.md : add"
+git commit -m "translations -> part02Dequeue.md : add"
 git push -u origin main
 git status
