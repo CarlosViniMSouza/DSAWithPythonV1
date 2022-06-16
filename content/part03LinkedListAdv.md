@@ -104,3 +104,9 @@ lla.listprint(lla.head)
 ```
 
 ## Appending to a Doubly linked list
+
+Appending to a doubly linked list will add the element at the end.
+
+```python
+
+```

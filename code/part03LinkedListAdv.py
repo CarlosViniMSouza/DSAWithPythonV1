@@ -31,26 +31,42 @@ class doubly_linked_list:
         if newNode.nextValue is not None:
             newNode.nextValue.prev = newNode
 
-# Print the Doubly Linked list
+    def append(self, newVal):
+        newNode = Node(newVal)
+        newNode.nextValue = None
+
+        if self.head is None:
+            newNode.preValue = None
+            self.head = newNode
+            return
+
+        last = self.head
+
+        while last.nextValue is not None:
+            last = last.nextValue
+
+        last.nextValue = newNode
+        newNode.preValue = last
+        return
+
+    # Print the Doubly Linked list
     def listprint(self, node):
-        while (node is not None):
-            print(node.dataValue),
-            last = node  # 'last' is unnecessary -> apparently ...
+        while node is not None:
+            print(node.dataValue, end=" -> "),
             node = node.nextValue
 
 
 lla = doubly_linked_list()
 lla.push(12)
-lla.push(8)
-lla.push(62)
+lla.append(9)
+lla.push(6)
+lla.push(24)
+lla.append(30)
 lla.insert(lla.head.nextValue, 13)
 lla.listprint(lla.head)
 
 """
 output:
 
-62
-8
-13
-12
+24 -> 6 -> 13 -> 12 -> 9 -> 30 -> 
 """
