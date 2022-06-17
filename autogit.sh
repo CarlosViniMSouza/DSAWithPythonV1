@@ -1,4 +1,4 @@
 git add -A 
-git commit -m "translations -> part03LinkedListAdv.md : done"
+git commit -m "python folder -> stack and queue: ok"
 git push -u origin main
 git status
