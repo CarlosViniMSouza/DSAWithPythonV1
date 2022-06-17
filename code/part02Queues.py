@@ -13,7 +13,8 @@ print(queue.popleft())  # The second to arrive now leaves
 # output: 'John'
 
 print(queue)            # Remaining queue in order of arrival
-# output: deque(['Michael', 'Terry', 'Graham'])"""
+# output: deque(['Michael', 'Terry', 'Graham'])
+"""
 
 
 class Queue:

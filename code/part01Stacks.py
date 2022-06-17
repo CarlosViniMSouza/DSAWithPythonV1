@@ -22,12 +22,6 @@ print(stack)
 # output: [3, 4]
 """
 
-"""
-Tutorials Point - Code of Stack in Python
-
-- With any alterations ...
-"""
-
 
 class Stack:
     def __init__(self):
