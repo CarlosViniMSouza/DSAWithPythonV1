@@ -51,6 +51,7 @@ class Dequeue:
             return "Element cant be removed!"
 
 
+"""
 dequeue01 = Dequeue()
 
 # Operation: addElement()
@@ -108,3 +109,4 @@ print("\nRemoving an element (more Left) in dequeue01:",
 
 print("Removing an element (more Left) in dequeue02:",
       dequeue02.removeElementLeft())
+"""
