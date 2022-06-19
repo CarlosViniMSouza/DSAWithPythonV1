@@ -1,7 +1,5 @@
 # Here, the things is a little diferent, compared to stacks, queues and decks ...
 
-from os import link
-
 
 class LinkedList:
 

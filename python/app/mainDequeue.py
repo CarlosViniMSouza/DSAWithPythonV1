@@ -1,5 +1,5 @@
 # Aqui deverá ser executado o programa que irá chamar as outras funções
-import linkedlist as ll
+import dequeue as deq
 import os
 
 # clear the terminal before of program execute the 'menu()'
@@ -8,7 +8,7 @@ os.system('clear') or None
 
 def menu():
     resp = 1
-    linkedList = ll.LinkedList()
+    dequeue = deq
 
     while resp != 0:
         print("\n\n")
@@ -27,23 +27,23 @@ def menu():
         match(resp):
 
             case 1:
-                valor = input("\nWrite the value for Add: ")
-                linkedList.addElementAtBeg(valor)
+                value = input("\nWrite the value for Add: ")
+                dequeue.addElement(value)
 
             case 2:
                 print("\nLast element from estructure -> Removed")
-                linkedList.removeElement()
+                dequeue.removeElement()
 
             case 3:
                 print("\nSee all estructure:")
-                linkedList.seeAlllinkedList()
+                dequeue.seeAllDequeue()
 
             case 4:
-                valor = input("\nWrite the value for Search: ")
-                print("\nSearch Results:", linkedList.searchElement(valor))
+                value = input("\nWrite the value for Search: ")
+                print("\nSearch Results:", dequeue.searchElement(value))
 
             case 5:
-                print("\nEstructure Size is:", linkedList.sizeLinkedList())
+                print("\nEstructure Size is:", dequeue.sizeDequeue())
 
 
 if __name__ == "__main__":
