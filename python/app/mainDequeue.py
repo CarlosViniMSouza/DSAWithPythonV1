@@ -1,4 +1,4 @@
-# Aqui deverá ser executado o programa que irá chamar as outras funções
+# Here, the program that will call the other functions must be executed
 import dequeue as deq
 import os
 
@@ -14,7 +14,7 @@ def menu():
         print("\n\n")
         print("1 - Add Element")
         print("2 - Remove Element")
-        print("3 - Visualize Estrutura")
+        print("3 - View the Estructure")
         print("4 - Search Element")
         print("5 - Estructure Size")
         print("\n[Write '0' for finished]")

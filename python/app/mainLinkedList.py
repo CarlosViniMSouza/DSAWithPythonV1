@@ -1,5 +1,5 @@
-# Here, the program that will call the other functions must be executed
-import file as file
+# Aqui deverá ser executado o programa que irá chamar as outras funções
+import linkedlist as ll
 import os
 
 # clear the terminal before of program execute the 'menu()'
@@ -8,7 +8,7 @@ os.system('clear') or None
 
 def menu():
     resp = 1
-    dataEstrucure = file.dataEstrucure()
+    linkedList = ll.LinkedList()
 
     while resp != 0:
         print("\n\n")
@@ -28,23 +28,22 @@ def menu():
 
             case 1:
                 value = input("\nWrite the value for Add: ")
-                dataEstrucure.addElement(value)
+                linkedList.addElementAtBeg(value)
 
             case 2:
                 value = input("\nWrite the value for Remove: ")
-                dataEstrucure.removeElement(value)
+                linkedList.removeElement(value)
 
             case 3:
                 print("\nSee all estructure:")
-                dataEstrucure.seeAlldataEstrucure()
+                linkedList.seeAllLinkedList()
 
             case 4:
                 value = input("\nWrite the value for Search: ")
-                print("\nSearch Results:", dataEstrucure.searchElement(value))
+                print("\nSearch Results:", linkedList.searchElement(value))
 
             case 5:
-                print("\nEstructure Size is:",
-                      dataEstrucure.sizedataEstrucure())
+                print("\nEstructure Size is:", linkedList.sizeLinkedList())
 
 
 if __name__ == "__main__":
