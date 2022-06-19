@@ -14,7 +14,7 @@ def menu():
         print("\n\n")
         print("1 - Add Element")
         print("2 - Remove Element")
-        print("3 - Visualize Estrutura")
+        print("3 - View Estructure")
         print("4 - Search Element")
         print("5 - Estructure Size")
         print("\n[Write '0' for finished]")
@@ -27,20 +27,20 @@ def menu():
         match(resp):
 
             case 1:
-                valor = input("\nWrite the value for Add: ")
-                linkedList.addElementAtBeg(valor)
+                value = input("\nWrite the value for Add: ")
+                linkedList.addElementAtBeg(value)
 
             case 2:
-                print("\nLast element from estructure -> Removed")
-                linkedList.removeElement()
+                value = input("\nWrite the value for Remove: ")
+                linkedList.removeElement(value)
 
             case 3:
                 print("\nSee all estructure:")
-                linkedList.seeAlllinkedList()
+                linkedList.seeAllLinkedList()
 
             case 4:
-                valor = input("\nWrite the value for Search: ")
-                print("\nSearch Results:", linkedList.searchElement(valor))
+                value = input("\nWrite the value for Search: ")
+                print("\nSearch Results:", linkedList.searchElement(value))
 
             case 5:
                 print("\nEstructure Size is:", linkedList.sizeLinkedList())
